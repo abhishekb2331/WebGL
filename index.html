@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - loaders - OBJ MTL loader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+			}
+			#info a, .button { color: #f00; font-weight: bold; text-decoration: underline; cursor: pointer }
+		</style>
+	</head>
+
+	<body>
+		<div id="info">
+		</div>
+
+		<script src="js/loaders/three.min.js"></script>
+
+		<script src="js/loaders/MTLLoader.js"></script>
+		<script src="js/loaders/OBJMTLLoader.js"></script>
+		<script src="js/loaders/OBJLoader.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+
+		<script>
+var temp=new Array()
+var len=0
+var group = new THREE.Object3D();
+
+			var container, stats,prevchar='v';
+
+			var camera, scene, renderer;
+
+			var mouseX = 0, mouseY = 0;
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+
+
+			init();
+			animate();
+
+function caller()
+{
+			//
+		if (temp.length!=0)
+		{
+/*				temp[0].scale.x=5;
+temp[0].scale.y=5;temp[0].scale.z=5;*/
+camera.position.y+=20;	
+}
+
+			}
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 100;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				var ambient = new THREE.AmbientLight( 0x444444 );
+				scene.add( ambient );
+				scene.add( new THREE.AmbientLight( 0x020202 ) );
+
+				/*var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+				directionalLight.position.set( 0, 0, 1 ).normalize();
+				scene.add( directionalLight );*/
+					var manager = new THREE.LoadingManager();
+manager.onProgress = function ( item, loaded, total ) {
+
+console.log( item, loaded, total );
+
+};
+				var texture = new THREE.Texture();
+
+				var loader2 = new THREE.ImageLoader( manager );
+				loader2.load( 'images/building_texture_01.jpg', function ( image ) {
+
+						texture.image = image;
+						texture.needsUpdate = true;
+
+				} );
+				// model
+
+	/*		var loader = new THREE.OBJLoader( manager );
+loader.load( 'obj/male02/male02.obj', function ( object ) {
+	temp[temp.length] = new THREE.Object3D();
+				
+temp[temp.length-1].add(object);
+temp[0].scale.x=3;
+temp[0].scale.y=3;
+temp[0].scale.z=3;
+	scene.add( temp[0] );
+	caller();
+});*/
+				var loader = new THREE.OBJMTLLoader();
+				loader.load( 'city.obj', 'city.mtl', function ( object ) {
+					temp[temp.length] = new THREE.Object3D();
+ 					object.traverse( function ( child ) {
+					/*var t1='images/building_texture_0'
+					var t2=Math.floor((Math.random()*6)+1); 
+					var n = t2.toString();
+					t1=t1.concat(n)
+					t1=t1.concat('.jpg')*/
+								var loader2 = new THREE.ImageLoader( manager );
+				loader2.load('images/building_texture_06.jpg', function ( image ) {
+
+						texture.image = image;
+						texture.needsUpdate = true;
+
+				} );
+
+								if ( child instanceof THREE.Mesh ) {
+
+									child.material.map = texture;
+
+								}
+	                             	} );				
+					temp[temp.length-1].add(object);
+					/*temp[0].scale.x=3;
+					temp[0].scale.y=3;
+					temp[0].scale.z=3;*/
+					scene.add( temp[0] );
+					caller();
+
+				} );
+if (temp.length!=0)
+		{
+				temp[0].scale.x=3;
+temp[0].scale.y=3;temp[0].scale.z=3;
+camera.position.y+=100;	
+}
+var loader = new THREE.OBJMTLLoader();
+
+var texture2 = new THREE.Texture();
+
+loader.load( 'Bus Model Packed.obj', 'Bus Model Packed.mtl', function ( object )  {
+	temp[temp.length] = new THREE.Object3D();
+			
+	object.traverse( function ( child ) {
+                             if ( child instanceof THREE.Mesh ) {
+                                  child.material.ambient.setHex(0x444444);
+                                  child.material.color.setHex(0x6600FF);
+                                 }
+                             } );				
+				var loader2 = new THREE.ImageLoader( manager );
+				loader2.load('images/im1.jpg', function ( image ) {
+
+						texture2.image = image;
+						texture2.needsUpdate = true;
+
+				} );
+object.traverse( function ( child ) {
+
+								if ( child instanceof THREE.Mesh ) {
+
+									child.material.map = texture2;
+
+								}
+	                             	} );	
+temp[temp.length-1].add(object);
+temp[temp.length-1].scale.x=7;
+temp[temp.length-1].scale.y=7;
+temp[temp.length-1].scale.z=7;
+temp[temp.length-1].position.x-=17;
+temp[temp.length-1].rotation.y=3.14;
+temp[temp.length-1].color=0x6600FF;
+	scene.add( temp[temp.length-1] );
+move_bus();
+});
+
+var texture2 = new THREE.Texture();
+
+loader.load( 'Nissan.obj', 'Nissan.mtl', function ( object )  {
+	temp[temp.length] = new THREE.Object3D();
+			
+	object.traverse( function ( child ) {
+                             if ( child instanceof THREE.Mesh ) {
+                                  child.material.ambient.setHex(0x444444);
+                                  child.material.color.setHex(0x6600FF);
+                                 }
+                             } );				
+				var loader2 = new THREE.ImageLoader( manager );
+				loader2.load('images/im1.jpg', function ( image ) {
+
+						texture2.image = image;
+						texture2.needsUpdate = true;
+
+				} );
+object.traverse( function ( child ) {
+
+								if ( child instanceof THREE.Mesh ) {
+
+									child.material.map = texture2;
+
+								}
+	                             	} );	
+temp[temp.length-1].add(object);
+temp[temp.length-1].scale.x=1.5;
+temp[temp.length-1].scale.y=1.5;
+temp[temp.length-1].scale.z=1.5;
+temp[temp.length-1].position.y+=4;
+temp[temp.length-1].position.x+=19;
+temp[temp.length-1].rotation.y=3.14;
+temp[temp.length-1].color=0x6600FF;
+	scene.add( temp[temp.length-1] );
+});
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setClearColor(0xAEEEEE, 1);
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'keydown', key_handle, false );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+}
+function move_bus(){
+temp[1].position.z-=10;
+/*if(temp[1].position.z<-200)
+{
+temp[1].position.z=200;
+}*/
+setTimeout(function() {move_bus()},2000);
+}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+			function key_handle(e)
+			{
+			 e = e || window.event;
+			if (e.keyCode == '67')
+			{
+				prevchar='c';
+			}
+			if (e.keyCode == '86')
+			{
+				prevchar='v';
+			}
+			 if (e.keyCode == '38')
+			{
+				if(prevchar=='c'){
+				camera.position.y+=4;}
+				else if(prevchar=='v')
+				{temp[2].position.z-=2;}
+			}
+			 if (e.keyCode == '70')
+			{
+				camera.position.z+=2;
+			}
+			 if (e.keyCode == '66')
+			{
+				camera.position.z-=2;
+			}
+			 if (e.keyCode == '37')
+			{
+				if (prevchar=='c'){
+				camera.position.x-=4;}
+				else if(prevchar=='v')
+				{temp[2].position.x-=2;}
+			}
+			 if (e.keyCode == '39')
+			{
+				if(prevchar=='c'){
+				camera.position.x+=4;}
+				else if(prevchar=='v')
+				{temp[2].position.x+=2;}
+			}
+			 if (e.keyCode == '40')
+			{
+				if(prevchar=='c'){
+				camera.position.y-=4;}
+				else if(prevchar=='v')
+				{temp[2].position.z+=2;}
+			}
+	
+			}
+			function onDocumentMouseMove( event ) {
+				mouseX = ( event.clientX - windowHalfX ) / 2;
+				mouseY = ( event.clientY - windowHalfY ) / 2;
+				if(prevchar=='c'){
+				camera.position.x=mouseX;
+				camera.position.y=mouseY;
+				}
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+				if(temp.length!=0){
+				camera.lookAt(temp[0].position);				
+				}
+				else{
+				camera.lookAt( [0,0,0] );
+}
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>

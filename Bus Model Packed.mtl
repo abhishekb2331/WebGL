@@ -1,0 +1,333 @@
+# Blender MTL File: 'Bus Model Packed.blend'
+# Material Count: 34
+
+newmtl Bus_Stop_Button
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.799995 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Ceiling
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.703698 0.785801 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\webgl_test\blend\textures\Roof Lights 1.png
+map_Bump E:\\webgl_test\\blend\\textures\\roof lights normal.PNG
+map_Ke E:\\webgl_test\\blend\\textures\\Roof Lights 1.png
+map_d E:\\webgl_test\\blend\\textures\\roof lights normal.PNG
+
+newmtl Display
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.011044 0.041029 0.207054
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Drivers_Lever
+Ns 834.507052
+Ka 0.800000 0.800000 0.800000
+Kd 0.047054 0.046427 0.046427
+Ks 0.618557 0.618557 0.618557
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Emergency_Window
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 0.200000
+illum 2
+map_Kd E:\\webgl_test\\blend\\textures\\emergency_exit_sign.png
+map_Ke E:\\webgl_test\\blend\\textures\\emergency_exit_sign.png
+map_d E:\\webgl_test\\blend\\textures\\emergency_exit_sign.png
+
+newmtl Fan
+Ns 895.539908
+Ka 0.800000 0.800000 0.800000
+Kd 0.032937 0.032937 0.032937
+Ks 0.180412 0.180412 0.180412
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Floor
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.070584 0.070584 0.070584
+Ks 0.025773 0.025773 0.025773
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\webgl_test\blend\textures\skin_artwork_v1.png
+
+newmtl Floor_NONE
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.070584 0.070584 0.070584
+Ks 0.025773 0.025773 0.025773
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Frame
+Ns 294.600934
+Ka 0.800000 0.800000 0.800000
+Kd 0.013097 0.013097 0.013097
+Ks 0.128866 0.128866 0.128866
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\webgl_test\blend\textures\skin_artwork_v1.png
+
+newmtl Frame_NONE
+Ns 294.600934
+Ka 0.800000 0.800000 0.800000
+Kd 0.013097 0.013097 0.013097
+Ks 0.128866 0.128866 0.128866
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Front_HUD
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.023525 0.023525 0.023525
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump E:\\webgl_test\\blend\\textures\\Front_alpha.png
+map_Kd E:\\webgl_test\\blend\\textures\\front_sign_text000.png
+map_Ke E:\\webgl_test\\blend\\textures\\front_sign_text000.png
+
+newmtl Green_Switch
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.158361 0.672937 0.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl License_Plate_Rear
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.738819 0.679573 0.019707
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\\webgl_test\\blend\\textures\\rear_license_plate.png
+
+newmtl Mirror
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Mirror_holder
+Ns 631.422944
+Ka 0.800000 0.800000 0.800000
+Kd 0.024847 0.025959 0.155290
+Ks 0.670940 0.670940 0.670940
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Outer_Artwork
+Ns 679.577462
+Ka 0.800000 0.800000 0.800000
+Kd 0.000000 0.000000 0.077988
+Ks 0.541105 0.541105 0.541105
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\webgl_test\blend\textures\skin_artwork_v1.png
+map_Bump E:\\webgl_test\\blend\\textures\\front_license_plate_normal.png
+
+newmtl Poles
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.485339 0.607381 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Rail
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.705878 0.705878 0.705878
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Rear_hud
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.032937 0.032937 0.032937
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\\webgl_test\\blend\\Mapping\\UV\\HUD\\rear_sign_text.png
+map_Ke E:\\webgl_test\\blend\\Mapping\\UV\\HUD\\rear_sign_text.png
+
+newmtl Red_Switch
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.762348 0.020334 0.020334
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Seat_Cover
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.009932 0.006026 0.451760
+Ks 0.067010 0.067010 0.067010
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Seat_Leg_and_Handles
+Ns 399.061091
+Ka 0.800000 0.800000 0.800000
+Kd 0.102401 0.189446 0.319995
+Ks 0.154639 0.154639 0.154639
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Seat_back
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.098704 0.163121 0.217727
+Ks 0.469072 0.469072 0.469072
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Side_HUD
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.042348 0.041502 0.041502
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\\webgl_test\\blend\\textures\\side_sign_text.png
+map_Ke E:\\webgl_test\\blend\\textures\\side_sign_text.png
+
+newmtl Switch_Base
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.070584 0.070114 0.070114
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Switch_Border
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.060612 0.062190 0.197642
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Switch_Label
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Underpanel
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.297557 0.226958 0.188455
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl Wall
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.704005 0.784134 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\webgl_test\blend\textures\Roof Lights 1.png
+map_Ke E:\\webgl_test\\blend\\textures\\bus_stopping_lit.png
+map_Ns E:\\webgl_test\\blend\\textures\\bus_stopping_unlit.png
+
+newmtl Wall_NONE
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.704005 0.784134 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:\\webgl_test\\blend\\textures\\bus_stopping_unlit.png
+map_Ke E:\\webgl_test\\blend\\textures\\bus_stopping_lit.png
+map_Ns E:\\webgl_test\\blend\\textures\\bus_stopping_unlit.png
+
+newmtl Wheel_Rim
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.475290 0.475290 0.475290
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl Wheel_Rubber
+Ns 115.686275
+Ka 0.800000 0.800000 0.800000
+Kd 0.046168 0.046168 0.046168
+Ks 0.056701 0.056701 0.056701
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Window
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.200000
+illum 1
+
+newmtl Wiper
+Ns 96.078431
+Ka 0.800000 0.800000 0.800000
+Kd 0.070584 0.070584 0.070584
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
